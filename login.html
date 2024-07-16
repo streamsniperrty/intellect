@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intellect - Login/Register</title>
+    <link href="login.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="icon.png" type="image/png">
+</head>
+<body>
+    <nav>
+        <div class="topnav">
+            <img src="icon.png" width="70" height="70" class="icon">
+            <ul> 
+                <li><a href="index.html"> MISSION</a></li>
+                <li><a href="#"> CHECKLIST</a></li>
+                <li><a href="#"> RESOURCES</a></li>
+                <li><a href="login.html"> LOGIN/REGISTER</a></li>
+            </ul>
+        </div>
+    </nav>       
+
+    <div class="content-wrapper">
+        <div class="bottom"></div>
+    </div>
+    <div class="mission-box">
+        <h2 class="login-title">LOGIN FORM</h2>
+        <div class="toggle-container">
+            <input type="checkbox" id="switch" class="toggle-input" />
+            <label for="switch" class="toggle-label">
+                <span class="toggle-text login-text">Login</span>
+                <span class="toggle-text register-text">Register</span>
+            </label>
+        </div>
+        <div id="loginForm" class="form-container">
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div id="registerForm" class="form-container" style="display: none;">
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- star images START--> 
+    <div class="star-container">
+        <img src="star1.png" alt="Star" class="star-image">
+    </div>
+    <div class="star-container-2">
+        <img src="star2.png" alt="Star" class="star-image-2">
+    </div>
+    <div class="star-container-3">
+        <img src="star3.png" alt="Star" class="star-image-3">
+    </div>
+    <div class="star-container-4">
+        <img src="star4.png" alt="Star" class="star-image-4">
+    </div>
+    <div class="star-black">
+        <img src="STAR.png" alt="Star" class="star-image-black">
+    </div>
+    <!-- star images END--> 
+
+    <script src="login.js"></script>
+</body>
+</html>
