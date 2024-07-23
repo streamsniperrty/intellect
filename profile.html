@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <button id="logout">Logout</button>
+  </body>
+  <script>
+    //If loggedIn is true, retrieve username and set title with username.
+    if (localStorage.getItem("loggedIn")) {
+      const username = localStorage.getItem("username");
+
+      // Set div and text to username
+      let emailParent = document.createElement("h1");
+      let emailChild = document.createTextNode("Hello, " + username);
+      emailParent.append(emailChild);
+      const currentDiv = document.getElementById("div1");
+      document.body.insertBefore(emailParent, currentDiv);
+    }
+  </script>
+  <script type="module" src="components/logOut.js"></script>
+</html>

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Garet:wght@400;700&display=swap');
 
 * {
@@ -46,7 +46,7 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 275px;
+  gap: 160px;
 }
 
 nav li {
@@ -57,15 +57,15 @@ nav a {
   font-size: 21px;
   text-decoration: none;
   color: black;
-  background-color: #f6f5f2; 
+  background-color: #f6f5f2;
   border-radius: 20px;
   padding: 9px 40px;
-  display: inline-block; 
+  display: inline-block;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #dedede; 
+  background-color: #dedede;
   cursor: pointer;
   border-radius: 20px;
   transition: background-color 0.5s ease, color 0.5s ease;
@@ -106,25 +106,25 @@ nav a:hover {
 
 .star-container {
   position: absolute;
-  top: -140px;  
-  left: -165px;  
-  z-index: 1; 
+  top: -140px;
+  left: -165px;
+  z-index: 1;
 }
 
 .star-image {
-  width: 90%;  
+  width: 90%;
   height: 90%;
 }
 
 .star-container-2 {
   position: absolute;
-  top: -100px;  
-  right: -280px;  
-  z-index: 3; 
+  top: -100px;
+  right: -280px;
+  z-index: 3;
 }
 
 .star-image-2 {
-  width: 80%;  
+  width: 80%;
   height: 80%;
 }
 
@@ -132,7 +132,7 @@ nav a:hover {
   position: fixed;
   bottom: -130px;
   right: -250px;
-  z-index: 3; 
+  z-index: 3;
 }
 
 .star-image-3 {
@@ -143,22 +143,22 @@ nav a:hover {
 .star-container-4 {
   position: fixed;
   bottom: -140px;
-  right: 950px; 
+  right: 950px;
 }
 
 .star-image-4 {
   width: 60%;
   height: 60%;
-  transform: rotate(-105deg); 
+  transform: rotate(-105deg);
 }
 
 .star-black {
   position: fixed;
   bottom: 140px;
-  left: -190px; 
+  left: -190px;
   z-index: 3;
-  width: 300px; 
-  height: 300px; 
+  width: 300px;
+  height: 300px;
 }
 
 .star-image-black {
@@ -176,7 +176,7 @@ nav a:hover {
   color: #000000;
   text-transform: uppercase;
   letter-spacing: 7px;
-  text-shadow: 5px 4px 0px rgba(0, 0, 0, 0.1); 
+  text-shadow: 5px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
 .toggle-container {
@@ -209,9 +209,10 @@ nav a:hover {
   font-size: 35px;
   font-weight: bold;
   z-index: 1;
-  font-family: 'Poppins', sans-serif; 
+  font-family: 'Poppins', sans-serif;
   transition: 0.3s ease;
-  letter-spacing: 1px; /* Adjust this value to increase or decrease spacing */
+  letter-spacing: 1px;
+  /* Adjust this value to increase or decrease spacing */
 }
 
 .login-text {
@@ -234,21 +235,25 @@ nav a:hover {
 
 .toggle-label .login-text,
 .toggle-label .register-text {
-  color: #000; /* Default color is black */
-  transition: color 0.3s ease; /* Smooth transition for color change */
+  color: #000;
+  /* Default color is black */
+  transition: color 0.3s ease;
+  /* Smooth transition for color change */
 }
 
-.toggle-input:not(:checked) + .toggle-label .login-text,
-.toggle-input:checked + .toggle-label .register-text {
-  color: #fff; /* Selected text is white */
+.toggle-input:not(:checked)+.toggle-label .login-text,
+.toggle-input:checked+.toggle-label .register-text {
+  color: #fff;
+  /* Selected text is white */
 }
 
-.toggle-input:checked + .toggle-label .login-text,
-.toggle-input:not(:checked) + .toggle-label .register-text {
-  color: #000; /* Unselected text is black */
+.toggle-input:checked+.toggle-label .login-text,
+.toggle-input:not(:checked)+.toggle-label .register-text {
+  color: #000;
+  /* Unselected text is black */
 }
 
-.toggle-input:checked + .toggle-label::before {
+.toggle-input:checked+.toggle-label::before {
   transform: translateX(100%);
 }
 

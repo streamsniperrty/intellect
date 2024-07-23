@@ -1,55 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intellect</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" href="icon.png" type="image/png">
-</head>
-<body>
-    <nav>
-        <div class="topnav">
-            <img src="icon.png" width="70" height="70" class="icon">
-            <ul> 
-                <li><a href="#"> MISSION</a></li>
-                <li><a href="#"> CHECKLIST</a></li>
-                <li><a href="#"> RESOURCES</a></li>
-                <li><a href="login.html"> LOGIN/REGISTER</a></li>
-            </ul>
-        </div>
-    </nav>       
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Intellect</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" href="icon.png" type="image/png" />
+    </head>
+    <body>
+        <nav>
+            <div class="topnav">
+                <img src="icon.png" width="70" height="70" class="icon" />
+                <ul id="nav">
+                    <li><a href="index.html"> MISSION</a></li>
+                    <li><a href="checklist.html"> CHECKLIST</a></li>
+                    <li><a href="resources.html"> RESOURCES</a></li>
+                    <li><a href="login.html"> LOGIN/REGISTER</a></li>
+                    <li><a href="profile.html"> PROFILE</a></li>
+                </ul>
+            </div>
+        </nav>
 
-    <div class="content-wrapper">
-        <h1 class="title">INTELLECT!</h1>
-        <h3 class="subtitle">Your College Journey, Intelligently Mapped </h3>
-        <div class="image-content">
-            <img src="lizard.png" alt="Lizard Image">
+        <div class="content-wrapper">
+            <h1 class="title" id="title">INTELLECT!</h1>
+            <h3 class="subtitle">Your College Journey, Intelligently Mapped</h3>
+            <div class="image-content">
+                <img src="lizard.png" alt="Lizard Image" />
+            </div>
+            <div class="bottom"></div>
         </div>
-        <div class="bottom"></div>
-    </div>
-    <div class="mission-box">
-        <h2 class="mission-heading">MISSION STATEMENT</h2>
-        <p class="mission-text">With Intellect, we aim to simplify the college application process for high school students. As fellow applicants, we understand the challenges of managing multiple applications and deadlines. Our mission is to provide a user-friendly platform that consolidates all necessary information in one place, from by grade checklists, direction to resources, and more. We empower students with the tools and knowledge to approach the college application process confidently, making higher education more accessible for all.</p>
-    </div>
+        <div class="mission-box">
+            <h2 class="mission-heading">MISSION STATEMENT</h2>
+            <p class="mission-text">
+                With Intellect, we aim to simplify the college application
+                process for high school students. As fellow applicants, we
+                understand the challenges of managing multiple applications and
+                deadlines. Our mission is to provide a user-friendly platform
+                that consolidates all necessary information in one place, from
+                by grade checklists, direction to resources, and more. We
+                empower students with the tools and knowledge to approach the
+                college application process confidently, making higher education
+                more accessible for all.
+            </p>
+        </div>
 
-    <!-- star images START--> 
-    <div class="star-container">
-        <img src="star1.png" alt="Star" class="star-image">
-    </div>
-    <div class="star-container-2">
-        <img src="star2.png" alt="Star" class="star-image-2">
-    </div>
-    <div class="star-container-3">
-        <img src="star3.png" alt="Star" class="star-image-3">
-    </div>
-    <div class="star-container-4">
-        <img src="star4.png" alt="Star" class="star-image-4">
-    </div>
-    <div class="star-black">
-        <img src="STAR.png" alt="Star" class="star-image-black">
-    </div>
-    <!-- star images END--> 
-    <script src="script.js"></script>
-</body>
+        <!-- star images START-->
+        <div class="star-container">
+            <img src="star1.png" alt="Star" class="star-image" />
+        </div>
+        <div class="star-container-2">
+            <img src="star2.png" alt="Star" class="star-image-2" />
+        </div>
+        <div class="star-container-3">
+            <img src="star3.png" alt="Star" class="star-image-3" />
+        </div>
+        <div class="star-container-4">
+            <img src="star4.png" alt="Star" class="star-image-4" />
+        </div>
+        <div class="star-black">
+            <img src="STAR.png" alt="Star" class="star-image-black" />
+        </div>
+        <!-- star images END-->
+        <script src="components/dynamicPage.js"></script>
+        <script type="module" src="script.js"></script>
+    </body>
 </html>

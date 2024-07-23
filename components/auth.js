@@ -21,27 +21,26 @@ const firebaseConfig = {
 
 // Initialize
 const app = initializeApp(firebaseConfig);
+const db = getFirestore();
+const auth = getAuth();
 
-const signUp = document.getElementById("submitRegister");
-
-signUp.addEventListener("click", (e) => {
-    e.preventDefault();
+const signUpFunc = () => {
     let emailTemp = document.getElementById("email").value;
     let passwordTemp = document.getElementById("password").value;
     let usernameTemp = document.getElementById("username").value;
 
+    // Convert values to string
     let email = emailTemp.toString();
     let password = passwordTemp.toString();
     let username = usernameTemp.toString();
 
-    const auth = getAuth();
-    const db = getFirestore();
-
+    // Email validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
         console.error("Invalid email format.");
     }
 
+    // Firebase email creation method
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
@@ -62,23 +61,39 @@ signUp.addEventListener("click", (e) => {
         .catch((e) => {
             console.log(e);
         });
-});
-
-const login = document.getElementById("login");
-login.addEventListener("click", (e) => {
-    e.preventDefault();
+}
+const logInFunc = () => {
     const email = document.getElementById("logEmail").value;
     const password = document.getElementById("logPassword").value;
-    const auth = getAuth();
-
+    
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            alert("Login is successful");
             let user = userCredential.user;
+
+            // Set localStorage values with user id, email, and login bool
             localStorage.setItem("loggedInUserId", user.uid);
+            localStorage.setItem("email", user.email);
+            localStorage.setItem("loggedIn", true);
+
+            // Redirect
             window.location.href = "index.html";
         })
         .catch((e) => {
+            alert("Username/password was incorrect.");
             console.log(e);
         });
+}
+
+// Sign up 
+const signUp = document.getElementById("submitRegister");
+signUp.addEventListener("click", (e) => {
+    e.preventDefault();
+    signUpFunc();
+});
+
+// Login
+const login = document.getElementById("login");
+login.addEventListener("click", (e) => {
+    e.preventDefault();
+    logInFunc();
 });
