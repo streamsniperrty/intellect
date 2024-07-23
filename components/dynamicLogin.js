@@ -16,12 +16,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-
-// If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
-
-// Add Firebase products that you want to use
-// import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
-// import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-firestore.js";
-
-
