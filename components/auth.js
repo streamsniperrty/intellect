@@ -52,7 +52,7 @@ const signUpFunc = () => {
             const docRef = doc(db, "users", user.uid);
             setDoc(docRef, userData)
                 .then(() => {
-                    window.location.href = "index.html";
+                    window.location.href = "mission.html";
                 })
                 .catch((e) => {
                     console.log(e);
@@ -61,11 +61,11 @@ const signUpFunc = () => {
         .catch((e) => {
             console.log(e);
         });
-}
+};
 const logInFunc = () => {
     const email = document.getElementById("logEmail").value;
     const password = document.getElementById("logPassword").value;
-    
+
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             let user = userCredential.user;
@@ -76,15 +76,15 @@ const logInFunc = () => {
             localStorage.setItem("loggedIn", true);
 
             // Redirect
-            window.location.href = "index.html";
+            window.location.href = "mission.html";
         })
         .catch((e) => {
             alert("Username/password was incorrect.");
             console.log(e);
         });
-}
+};
 
-// Sign up 
+// Sign up
 const signUp = document.getElementById("submitRegister");
 signUp.addEventListener("click", (e) => {
     e.preventDefault();
